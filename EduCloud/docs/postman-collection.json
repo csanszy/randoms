@@ -1,0 +1,1359 @@
+{
+    "collection": {
+        "info": {
+            "_postman_id": "ac6b7906-1de3-4ac7-9560-cea309f245a5",
+            "name": "Educloud",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+            "updatedAt": "2024-12-04T21:58:52.000Z",
+            "createdAt": "2024-12-04T14:04:00.000Z",
+            "lastUpdatedBy": "38461072",
+            "uid": "29597192-ac6b7906-1de3-4ac7-9560-cea309f245a5"
+        },
+        "item": [
+            {
+                "name": "auth",
+                "item": [
+                    {
+                        "name": "login",
+                        "id": "dd98f860-cd7b-4bc4-ac2d-205fad141c25",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"username\" : \"lol\",\r\n    \"password\": \"lol\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/auth",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "auth"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-dd98f860-cd7b-4bc4-ac2d-205fad141c25"
+                    },
+                    {
+                        "name": "register",
+                        "id": "d64574de-70c9-4173-a894-2d0d129427be",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"username\" : \"ghjklljhk\",\r\n    \"password\": \"alma\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/auth/register",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "auth",
+                                    "register"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-d64574de-70c9-4173-a894-2d0d129427be"
+                    }
+                ],
+                "id": "99196e9f-c0c3-4147-80dd-293c6bd810e4",
+                "uid": "29597192-99196e9f-c0c3-4147-80dd-293c6bd810e4"
+            },
+            {
+                "name": "module",
+                "item": [
+                    {
+                        "name": "getAllModules",
+                        "id": "745519a7-a2fa-49e3-9249-bb58143f8861",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/module/get-all",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "module",
+                                    "get-all"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-745519a7-a2fa-49e3-9249-bb58143f8861"
+                    },
+                    {
+                        "name": "getModuleById",
+                        "id": "b419ae8e-d0cd-4810-af87-13126917e732",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/module/get-by-id?id=xy",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "module",
+                                    "get-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "xy"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-b419ae8e-d0cd-4810-af87-13126917e732"
+                    },
+                    {
+                        "name": "getModuleByName",
+                        "id": "7ec7ac27-66a8-423e-b2d2-71abdf910f7d",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/module/get-by-name?name=xy",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "module",
+                                    "get-by-name"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "name",
+                                        "value": "xy"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-7ec7ac27-66a8-423e-b2d2-71abdf910f7d"
+                    },
+                    {
+                        "name": "getModuleByFilter",
+                        "id": "a650693b-1582-472f-8464-84cb8b451a76",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/module/get-by-filter?category=xy&grade=xy&profession=xy",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "module",
+                                    "get-by-filter"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "category",
+                                        "value": "xy"
+                                    },
+                                    {
+                                        "key": "grade",
+                                        "value": "xy"
+                                    },
+                                    {
+                                        "key": "profession",
+                                        "value": "xy"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-a650693b-1582-472f-8464-84cb8b451a76"
+                    }
+                ],
+                "id": "bfd3f239-035f-465a-8697-d7a9d7c84430",
+                "uid": "29597192-bfd3f239-035f-465a-8697-d7a9d7c84430"
+            },
+            {
+                "name": "assignment",
+                "item": [
+                    {
+                        "name": "getAllAssignments",
+                        "id": "9c152866-9a4a-4631-939f-59b6f8486587",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/assignment/get-all",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "assignment",
+                                    "get-all"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-9c152866-9a4a-4631-939f-59b6f8486587"
+                    },
+                    {
+                        "name": "getAssignmentById",
+                        "id": "a6fbeefd-1166-47e5-b992-dc3d60201c58",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/assignment/get-by-id?id=xy",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "assignment",
+                                    "get-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "xy"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-a6fbeefd-1166-47e5-b992-dc3d60201c58"
+                    },
+                    {
+                        "name": "getAssignmentByName",
+                        "id": "baae81b8-f887-4163-beaa-99d057b37266",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/assignment/get-by-name?name=xy",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "assignment",
+                                    "get-by-name"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "name",
+                                        "value": "xy"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-baae81b8-f887-4163-beaa-99d057b37266"
+                    },
+                    {
+                        "name": "getAssignmentByFilter",
+                        "id": "9b132d25-da2b-4b77-8a13-895ac426349b",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/assignment/get-by-filter?category=none&grade=none&profession=b9307f8d-81bb-49d2-b6c2-c9a16d213465",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "assignment",
+                                    "get-by-filter"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "category",
+                                        "value": "none"
+                                    },
+                                    {
+                                        "key": "grade",
+                                        "value": "none"
+                                    },
+                                    {
+                                        "key": "profession",
+                                        "value": "b9307f8d-81bb-49d2-b6c2-c9a16d213465"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-9b132d25-da2b-4b77-8a13-895ac426349b"
+                    }
+                ],
+                "id": "3fbf5349-9a1a-4f8d-914c-5a1d22c82eac",
+                "uid": "29597192-3fbf5349-9a1a-4f8d-914c-5a1d22c82eac"
+            },
+            {
+                "name": "user",
+                "item": [
+                    {
+                        "name": "getAllUsers",
+                        "id": "05d13509-d472-4993-92c7-183e7b2710c5",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/module/get-all",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "module",
+                                    "get-all"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-05d13509-d472-4993-92c7-183e7b2710c5"
+                    },
+                    {
+                        "name": "getUserById",
+                        "id": "653ff797-9eaa-4a08-8df8-df6978b2e0e7",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/user/get-all?id=asd",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "user",
+                                    "get-all"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "asd"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-653ff797-9eaa-4a08-8df8-df6978b2e0e7"
+                    },
+                    {
+                        "name": "createUser",
+                        "id": "c7ae758b-b5f9-4e29-8fde-5dab955c061c",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n  \"username\": \"lol\",\r\n  \"password\": \"lol\",\r\n  \"displayName\": \"Geza\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"birthDate\": \"1990-01-01T00:00:00Z\",\r\n  \"roles\" : [\"admin\"]\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/admin/user/create",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "user",
+                                    "create"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-c7ae758b-b5f9-4e29-8fde-5dab955c061c"
+                    },
+                    {
+                        "name": "updateUserById",
+                        "id": "25179b89-3ae9-470d-9e14-c1a372be1352",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "PUT",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n  \"username\": \"Jani Gyula\",\r\n  \"password\": \"asdsad\",\r\n  \"displayName\": \"asd\",\r\n  \"email\": \"johndoe@.com\",\r\n  \"birthDate\": \"1990-01-01T00:00:00Z\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{host}}api/admin/user/update-by-id?id=85cde96b-5732-4bc6-a648-3f61ca17e004",
+                                "host": [
+                                    "{{host}}api"
+                                ],
+                                "path": [
+                                    "admin",
+                                    "user",
+                                    "update-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "85cde96b-5732-4bc6-a648-3f61ca17e004"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-25179b89-3ae9-470d-9e14-c1a372be1352"
+                    },
+                    {
+                        "name": "deleteUserById",
+                        "id": "9d2e2c7d-b562-4452-931d-d36d74fad8d3",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}api/admin/user/delete-by-id?id=asd",
+                                "host": [
+                                    "{{host}}api"
+                                ],
+                                "path": [
+                                    "admin",
+                                    "user",
+                                    "delete-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "asd"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-9d2e2c7d-b562-4452-931d-d36d74fad8d3"
+                    }
+                ],
+                "id": "65109878-c5b3-4447-a4ca-98f2de27c235",
+                "uid": "29597192-65109878-c5b3-4447-a4ca-98f2de27c235"
+            },
+            {
+                "name": "adminAssignment",
+                "item": [
+                    {
+                        "name": "getAllAssignments",
+                        "id": "4511383b-bec6-41e9-82f0-9fac515843e0",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/assignment/get-all",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "assignment",
+                                    "get-all"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-4511383b-bec6-41e9-82f0-9fac515843e0"
+                    },
+                    {
+                        "name": "getAssignmentById",
+                        "id": "72e17cca-b6da-44dd-b6e6-965ba74efaf9",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}api/admin/module/get-by-id?id=asd",
+                                "host": [
+                                    "{{host}}api"
+                                ],
+                                "path": [
+                                    "admin",
+                                    "module",
+                                    "get-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "asd"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-72e17cca-b6da-44dd-b6e6-965ba74efaf9"
+                    },
+                    {
+                        "name": "getAssignmentByModule",
+                        "id": "2878fa36-a02f-41c4-b918-776bced6c606",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/assignment/get-by-name?name=asd",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "assignment",
+                                    "get-by-name"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "name",
+                                        "value": "asd"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-2878fa36-a02f-41c4-b918-776bced6c606"
+                    },
+                    {
+                        "name": "getAssignmentByFilter",
+                        "id": "c0cd4188-bd34-4585-8138-8b49e8799cb9",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/assignment/get-by-filterl?category=xy&grade=xy&profession=xy",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "assignment",
+                                    "get-by-filterl"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "category",
+                                        "value": "xy"
+                                    },
+                                    {
+                                        "key": "grade",
+                                        "value": "xy"
+                                    },
+                                    {
+                                        "key": "profession",
+                                        "value": "xy"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-c0cd4188-bd34-4585-8138-8b49e8799cb9"
+                    },
+                    {
+                        "name": "createAssignment",
+                        "id": "1e58c820-84a3-40cb-af48-3c0b40c4ab34",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "urlencoded",
+                                "urlencoded": [
+                                    {
+                                        "key": "name",
+                                        "value": "asdf",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "content",
+                                        "value": "safdasdfdgf",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "description",
+                                        "value": "asdfgdfa",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "gradeId",
+                                        "value": "5fdae80a-cbc5-4f4f-a0f1-2e81e80e83d9",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "categoryId",
+                                        "value": "347b83ac-845a-4fd2-9939-a9821d08ec03",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "professionId",
+                                        "value": "b9307f8d-81bb-49d2-b6c2-c9a16d213465",
+                                        "type": "text"
+                                    }
+                                ]
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/admin/assignment/create",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "assignment",
+                                    "create"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-1e58c820-84a3-40cb-af48-3c0b40c4ab34"
+                    },
+                    {
+                        "name": "updateAssignmentById",
+                        "id": "78d25a65-7647-485a-8596-fea7111ae147",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "PUT",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n  \"username\": \"Jani Gyula\",\r\n  \"password\": \"asdsad\",\r\n  \"displayName\": \"asd\",\r\n  \"email\": \"johndoe@.com\",\r\n  \"birthDate\": \"1990-01-01T00:00:00Z\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/admin/assignment/update-by-id?id=zt",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "assignment",
+                                    "update-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "zt"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-78d25a65-7647-485a-8596-fea7111ae147"
+                    },
+                    {
+                        "name": "deleteAssignmentById",
+                        "id": "04d551fa-7bc1-4389-9319-114671a84f14",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/assignment/delete-by-id?id=asd",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "assignment",
+                                    "delete-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "asd"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-04d551fa-7bc1-4389-9319-114671a84f14"
+                    }
+                ],
+                "id": "c3976568-d518-4e81-badb-4f5ca31b20f1",
+                "uid": "29597192-c3976568-d518-4e81-badb-4f5ca31b20f1"
+            },
+            {
+                "name": "adminModule",
+                "item": [
+                    {
+                        "name": "getAllModules",
+                        "id": "1e33eeb3-4600-42d0-8ebb-6af1faa92d5e",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/module/get-all",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "module",
+                                    "get-all"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-1e33eeb3-4600-42d0-8ebb-6af1faa92d5e"
+                    },
+                    {
+                        "name": "getModuleById",
+                        "id": "aa7bcb0a-e99c-47f8-b57b-a6f2c8f216b2",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/module/get-by-id?id=b61d3f33-2ba7-4a2e-b9f5-6614dc0aa793",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "module",
+                                    "get-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "b61d3f33-2ba7-4a2e-b9f5-6614dc0aa793"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-aa7bcb0a-e99c-47f8-b57b-a6f2c8f216b2"
+                    },
+                    {
+                        "name": "getModuleByName",
+                        "id": "7c8abbf7-c781-423c-abde-133b6cfb0dbc",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/module/get-by-name?name=asdf",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "module",
+                                    "get-by-name"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "name",
+                                        "value": "asdf"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-7c8abbf7-c781-423c-abde-133b6cfb0dbc"
+                    },
+                    {
+                        "name": "getModuleByFilter",
+                        "id": "55c22cef-f341-4578-8ee7-37c0b7a50a3c",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/module/get-by-filter?category=none&grade=none&profession=b9307f8d-81bb-49d2-b6c2-c9a16d213465",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "module",
+                                    "get-by-filter"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "category",
+                                        "value": "none"
+                                    },
+                                    {
+                                        "key": "grade",
+                                        "value": "none"
+                                    },
+                                    {
+                                        "key": "profession",
+                                        "value": "b9307f8d-81bb-49d2-b6c2-c9a16d213465"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-55c22cef-f341-4578-8ee7-37c0b7a50a3c"
+                    },
+                    {
+                        "name": "createModule",
+                        "id": "3730649c-67c9-47bc-8646-aa98db640d39",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "urlencoded",
+                                "urlencoded": [
+                                    {
+                                        "key": "name",
+                                        "value": "asdf",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "content",
+                                        "value": "safdasdfdgf",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "description",
+                                        "value": "asdfgdfa",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "gradeId",
+                                        "value": "723b4baf-ba4e-496c-9d75-5594260e83bb",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "categoryId",
+                                        "value": "19b3f2b9-3813-4d0d-8a68-fbed274b3e82",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "professionId",
+                                        "value": "2da0f86f-e3b7-4d05-990f-1bed78d2fd2c",
+                                        "type": "text"
+                                    }
+                                ]
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/admin/module/create",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "module",
+                                    "create"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-3730649c-67c9-47bc-8646-aa98db640d39"
+                    },
+                    {
+                        "name": "updateModuleById",
+                        "id": "501b0324-add2-4b3c-8fe7-a252d947328e",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "PUT",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n  \"username\": \"Jani Gyula\",\r\n  \"password\": \"asdsad\",\r\n  \"displayName\": \"asd\",\r\n  \"email\": \"johndoe@.com\",\r\n  \"birthDate\": \"1990-01-01T00:00:00Z\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/admin/module/update-by-id?id=zt",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "module",
+                                    "update-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "zt"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-501b0324-add2-4b3c-8fe7-a252d947328e"
+                    },
+                    {
+                        "name": "deleteModuleById",
+                        "id": "7c125907-31e6-40fa-923f-f9e03dc0d595",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/module/delete-by-id?id=asd",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "module",
+                                    "delete-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "asd"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-7c125907-31e6-40fa-923f-f9e03dc0d595"
+                    }
+                ],
+                "id": "3f9b2e47-7eea-4c09-a63c-c8a49b6b2df7",
+                "uid": "29597192-3f9b2e47-7eea-4c09-a63c-c8a49b6b2df7"
+            },
+            {
+                "name": "category",
+                "item": [
+                    {
+                        "name": "getAllCategories",
+                        "id": "c2580b55-b2ab-4df0-915a-0a96b3ce0b33",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/category/get-all",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "category",
+                                    "get-all"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-c2580b55-b2ab-4df0-915a-0a96b3ce0b33"
+                    },
+                    {
+                        "name": "createCategory",
+                        "id": "9c42fa6a-7a1a-4b08-aab0-9f4817db52e8",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"categoryName\":\"asd\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/admin/category/create",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "category",
+                                    "create"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-9c42fa6a-7a1a-4b08-aab0-9f4817db52e8"
+                    },
+                    {
+                        "name": "deleteCategoryById",
+                        "id": "96a6aeee-cd6e-4245-85f4-e3d094a2a189",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/category/delete-by-id?id=d0e5f819-ada0-43fa-b906-e6ea3bac7ca2",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "category",
+                                    "delete-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "d0e5f819-ada0-43fa-b906-e6ea3bac7ca2"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-96a6aeee-cd6e-4245-85f4-e3d094a2a189"
+                    }
+                ],
+                "id": "568bf028-9406-4042-a997-d98ce8b79c37",
+                "uid": "29597192-568bf028-9406-4042-a997-d98ce8b79c37"
+            },
+            {
+                "name": "grade",
+                "item": [
+                    {
+                        "name": "getAllGrades",
+                        "id": "b105e3f9-4343-4cef-8acb-9d12b57da731",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/grade/get-all",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "grade",
+                                    "get-all"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-b105e3f9-4343-4cef-8acb-9d12b57da731"
+                    },
+                    {
+                        "name": "createGrade",
+                        "id": "d6fe6e9e-c8fe-471a-a39c-bfcfe9310c49",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"gradeName\":\"asd\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/admin/grade/create",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "grade",
+                                    "create"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-d6fe6e9e-c8fe-471a-a39c-bfcfe9310c49"
+                    },
+                    {
+                        "name": "deleteGradeById",
+                        "id": "61072a5e-c5df-41fa-bbf5-7c6f1be27146",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/grade/delete-by-id?id=asd",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "grade",
+                                    "delete-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "asd"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-61072a5e-c5df-41fa-bbf5-7c6f1be27146"
+                    }
+                ],
+                "id": "7f47fcef-3b0e-44b2-b14d-4082e3d3693c",
+                "uid": "29597192-7f47fcef-3b0e-44b2-b14d-4082e3d3693c"
+            },
+            {
+                "name": "profession",
+                "item": [
+                    {
+                        "name": "getAllProfessions",
+                        "id": "c99f2603-1b95-496c-8fdc-3a95c17f0936",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/profession/get-all",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "profession",
+                                    "get-all"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-c99f2603-1b95-496c-8fdc-3a95c17f0936"
+                    },
+                    {
+                        "name": "createProfession",
+                        "id": "3967c563-b4ec-45ed-b30a-7d931020993b",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"professionName\":\"asd\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{host}}/api/admin/profession/create",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "profession",
+                                    "create"
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-3967c563-b4ec-45ed-b30a-7d931020993b"
+                    },
+                    {
+                        "name": "deleteProfessionById",
+                        "id": "edceeed2-0190-4579-a68e-8c4f0ff498a5",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/api/admin/profession/delete-by-id?id=asd",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "admin",
+                                    "profession",
+                                    "delete-by-id"
+                                ],
+                                "query": [
+                                    {
+                                        "key": "id",
+                                        "value": "asd"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [],
+                        "uid": "29597192-edceeed2-0190-4579-a68e-8c4f0ff498a5"
+                    }
+                ],
+                "id": "c48d32b5-8f85-4c28-ba80-c62b142fd360",
+                "uid": "29597192-c48d32b5-8f85-4c28-ba80-c62b142fd360"
+            }
+        ],
+        "event": [
+            {
+                "listen": "prerequest",
+                "script": {
+                    "id": "3bfe20b1-aaf0-4ff9-8897-9c221e0fbc3a",
+                    "type": "text/javascript",
+                    "packages": {},
+                    "exec": [
+                        ""
+                    ]
+                }
+            },
+            {
+                "listen": "test",
+                "script": {
+                    "id": "e00f140c-9445-4609-8319-4200c9be5b4f",
+                    "type": "text/javascript",
+                    "packages": {},
+                    "exec": [
+                        ""
+                    ]
+                }
+            }
+        ],
+        "variable": [
+            {
+                "key": "host",
+                "value": "http://localhost:3300/",
+                "type": "string"
+            }
+        ]
+    }
+}

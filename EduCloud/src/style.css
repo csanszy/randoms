@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  user-select: none;
+  margin: 0;
+}
+
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+
+
+#app {
+  margin: 0 auto;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #ec994b !important;
+
+}
+
+span.swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
+  background-color: #ffffff !important;
+}

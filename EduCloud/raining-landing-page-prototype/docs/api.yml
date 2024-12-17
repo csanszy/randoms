@@ -1,0 +1,153 @@
+openapi: 3.0.0
+
+info:
+  title: CourseController API
+  version: 1.0.0
+  description: API for the project called CourseController.
+
+servers:
+  - url: http://localhost:3300
+    description: Local server
+
+security:
+  - ApiKeyAuth: []
+
+paths:
+  /login:
+    post:
+      summary: User login
+      description: Authenticate the user and return a JWT token.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  maxLength: 24
+                  pattern: ^[a-zA-ZáÁéÉíÍóÓöÖőŐúÚüÜűŰ0-9]+$
+                  description: The username of the user.
+                password:
+                  type: string
+                  maxLength: 24
+                  pattern: ^[a-zA-ZáÁéÉíÍóÓöÖőŐúÚüÜűŰ0-9]+$
+                  description: The password of the user.
+              required:
+                - username
+                - password
+              example:
+                username: Patrik
+                password: secretpassword
+              additionalProperties: false
+      responses:
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    maxLength: 128
+                    pattern: ^[a-zA-ZáÁéÉíÍóÓöÖőŐúÚüÜűŰ0-9]+$
+                    description: The respone message for unexpected error
+                example:
+                  error: Unexpected error
+                additionalProperties: false
+        "200":
+          description: Successful login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    maxLength: 500
+                    pattern: ^[a-zA-ZáÁéÉíÍóÓöÖőŐúÚüÜűŰ0-9]+$
+                    description: The JWT token for accessing protected endpoints.
+                example:
+                  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+                additionalProperties: false
+        "401":
+          description: Unauthorized - Invalid credentials
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    maxLength: 128
+                    pattern: ^[a-zA-ZáÁéÉíÍóÓöÖőŐúÚüÜűŰ0-9]+$
+                    example: Invalid username or password
+                additionalProperties: false
+        '400':
+          description: Bad Request - Missing or invalid data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    maxLength: 128
+                    pattern: ^[a-zA-ZáÁéÉíÍóÓöÖőŐúÚüÜűŰ0-9]+$
+                    example: Username and password are are missing
+                additionalProperties: false
+        "429":
+          description: Too many requests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    maxLength: 128
+                    pattern: ^[a-zA-ZáÁéÉíÍóÓöÖőŐúÚüÜűŰ0-9]+$
+                    description: The respone message for too many requests
+                example:
+                  error: Too many requests
+                additionalProperties: false
+        "415":
+          description: Unsupported media type
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    maxLength: 128
+                    pattern: ^[a-zA-ZáÁéÉíÍóÓöÖőŐúÚüÜűŰ0-9]+$
+                    description: The respone message for unsupported media type
+                example:
+                  error: Unsupported media type
+                additionalProperties: false
+        "406":
+          description: Not Acceptable, default response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    maxLength: 128
+                    pattern: ^[a-zA-ZáÁéÉíÍóÓöÖőŐúÚüÜűŰ0-9]+$
+                    description: The default response message.
+                example:
+                  error: Not Acceptable
+                additionalProperties: false
+                
+components: 
+    securitySchemes:
+      ApiKeyAuth:
+        type: ApiKey
+        in: header
+        name: X-EduCloud-Key
+       
